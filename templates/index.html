@@ -49,14 +49,11 @@
 
 
                       <div class="form-group">
-                        <input type="number" class="form-control  mt-2" placeholder="Phone Number" name="phone" required>
+                        <input type="number" class="form-control  mt-2" placeholder="ID Number" name="idnum" required>
 
                     </div>
 
-                       <div class="form-group">
-                        <input type="number" class="form-control  mt-2" placeholder="Amount" name="amount" required>
 
-                    </div>
 
 
                     <div class="d-grid gap-2">
@@ -78,9 +75,8 @@
                         <th scope="col">Email</th>
                         <th scope="col">Age</th>
                         <th scope="col">Gender</th>
-                          <th scope="col">Phone Number</th>
-                          <th scope="col">Amount</th>
-                          <th scope="col">Pay</th>
+                          <th scope="col">ID Number</th>
+
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>
 
@@ -88,18 +84,19 @@
                     </thead>
                     <tbody cl
                            ass="table-group-divider">
-
                     {% for d in data %}
+
+
                       <tr>
                         <th scope="row">{{d.id}}</th>
                         <td>{{d.name}}</td>
                         <td>{{d.email}}</td>
                         <td>{{d.age}}</td>
                         <td>{{d.gender}}</td>
+
                           <form action="">
-                                <td><input name="phone" type="text" value="{{d.phonenumber}}"></td>
-                            <td><input name="amount" type="text" value="{{d.amount}}"></td>
-                       <td><a href="/pay/{{d.id}}" type="button" class="btn btn-outline-danger">Pay</a></td>
+                                <td><input name="phone" type="text" value="{{d.idnum}}"></td>
+
 
                           </form>
                          <td><a href="/update/{{d.id}}" type="button" class="btn btn-outline-warning">Edit</a></td>
@@ -107,6 +104,7 @@
 
                        </tr>
                     {% endfor %}
+
                     </tbody>
                   </table>
 
